@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mr.Todo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500" rel="stylesheet">
+    <link rel="icon" type="image/png" href="fav.png" />
+</head>
+<body>
+<div id="todo">
+    <header>
+        <span id="day">Day,</span> <span id="date">Date</span> <br>
+        <span id="tasksTotal"><span id="tasksTotalN"></span><small> Tasks</small></span>
+        <span id="month">Month</span>
+    </header>
+    <div id="plus" onclick="$('#add-box-cover').fadeIn(500);$('#add-box').fadeIn(500);">+</div>
+    <div id="tasks">
+        <!-- <p>
+            <label class="container">
+                <input type="checkbox" onchange="done(this);">
+                <span class="checkmark"></span>
+            </label>
+            <span class="text">Hello World</span>
+            <span class="time">1PM</span>
+        </p>
+        <p>
+            <label class="container">
+                <input type="checkbox" onchange="done(this);">
+                <span class="checkmark"></span>
+            </label>
+            <span class="text">Hello World 2</span>
+            <span class="time">1PM</span>
+        </p> -->
+    </div>
+    <h1 id="logo">Mr. Todo <br> <br>
+        <small><small><small>Loading...</small></small></small>
+    </h1>
+    <div style="position:absolute; top:120px; width:350px; text-align:center; z-index:1;">
+        No Task...
+    </div>
+    <button id="clear-all" onclick="clrChecked();">Clear All Done Tasks ! </button>
+    <div id="add-box">
+        <div id="loader" style="display: none; width: 100%; height: 100%; background: rgba(0, 0, 0, .0); position: fixed; z-index: 8; top: 0; right: 0; text-align: center;">
+            <img src="load.gif" alt="Loading" style=" width: 20px; margin-top: 150px;">
+        </div>
+
+        <button id="close" onclick="$('#add-box-cover').fadeOut(500);$('#add-box').fadeOut(500);">X</button>
+        <h3>add</h3>
+        <h2>new task</h2>
+        <br>
+        <span id="err"></span>
+        <br>
+        <input type="text" id="new-todo" maxlength="26" placeholder="What?" onfocus="document.getElementById('err').innerHTML = ''; this.style.borderBottom = '2px solid rgba(105, 105, 105, .2)';">
+        <small style="text-align:center; display:block;">(Max 26 Charactor including spaces)</small>
+        <br>
+        <input type="text" id="new-todo-time" maxlength="8" placeholder="When?" onfocus="if(this.value == '') {this.value = '9:00 PM'}; document.getElementById('err').innerHTML = ''; this.style.borderBottom = '2px solid rgba(105, 105, 105, .2)';">
+        <button id="adder" onclick="addTodo();">Add!</button>
+    </div>
+        <footer>
+            Designed & Developed by <a href="https://facebook.com/OyeOvi" target="_blank">Owais (Ovi)</a>
+        </footer>
+</div>
+
+<div id="add-box-cover"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
