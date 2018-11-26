@@ -3,4 +3,4 @@ Simple Todo App Using Javascript
 
 Assignment while learning Javascript
 
-Demo: https://oyeovi.github.io/Todo-App-Using-Javascript/
+Demo: https://muhammadovi.github.io/Todo-App-Using-Javascript/
